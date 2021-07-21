@@ -1,7 +1,14 @@
 # Some heading
+
 This is a paragraph. It contains ==highlighted== text.
 More ==text==, also ==here==.
-**bold** in bold.
+**bold** text.
 
 # ==Highlighted text in heading==
-[==Some==](http://example.pt)
+
+[==in link==](http://example.pt)
+`==in code==`
+
+```
+some code ==123==
+```

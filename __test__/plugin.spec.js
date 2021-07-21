@@ -44,12 +44,15 @@ describe('remarkHighlight', function () {
       .processSync(fs.readFileSync(`${__dirname}/fixtures/note.md`, 'utf8'));
 
     expect(contents).toMatchInlineSnapshot(`
-      "<h1>Some heading</h1>
-      <p>This is a paragraph. It contains <mark className=\\"highlight\\">highlighted</mark> text.
-      More <mark className=\\"highlight\\">text</mark>, also <mark className=\\"highlight\\">here</mark>.
-      <strong>bold</strong> in bold.</p>
-      <h1><mark className=\\"highlight\\">Highlighted text in heading</mark></h1>
-      <p><a href=\\"http://example.pt\\"><mark className=\\"highlight\\">Some</mark></a></p>"
-    `);
+"<h1>Some heading</h1>
+<p>This is a paragraph. It contains <mark className=\\"highlight\\">highlighted</mark> text.
+More <mark className=\\"highlight\\">text</mark>, also <mark className=\\"highlight\\">here</mark>.
+<strong>bold</strong> text.</p>
+<h1><mark className=\\"highlight\\">Highlighted text in heading</mark></h1>
+<p><a href=\\"http://example.pt\\"><mark className=\\"highlight\\">in link</mark></a>
+<code>==in code==</code></p>
+<pre><code>some code ==123==
+</code></pre>"
+`);
   });
 });
